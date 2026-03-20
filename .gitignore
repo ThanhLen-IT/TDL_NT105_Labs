@@ -1,19 +1,23 @@
-CMakeLists.txt.user
-CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
-Makefile
-cmake_install.cmake
-install_manifest.txt
-compile_commands.json
-CTestTestfile.cmake
-_deps
-CMakeUserPresets.json
+# --- MATLAB Tạm thời & Cache ---
+*.asv              # Autosave files (cực kỳ nên chặn)
+*.m~               # Backup files
+*.slxc             # Simulink cache
+*.mex* # Compiled MEX files (phụ thuộc vào hệ điều hành)
+node_modules/      # Nếu dùng app designer hoặc javascript
+derived/           # Thư mục chứa dữ liệu phát sinh
 
-# CLion
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#cmake-build-*
+# --- MATLAB Projects ---
+resources/         # File hệ thống của MATLAB Project (thường sinh ra tự động)
+_out/              # Thư mục output
+work/              # Thư mục làm việc tạm thời
+
+# --- Simulink ---
+slprj/             # Thư mục mô phỏng của Simulink (rất nặng và sinh tự động)
+*.tmp              # Files tạm
+*.log              # Nhật ký chạy
+
+# --- Hệ điều hành & IDE ---
+.DS_Store          # macOS
+Thumbs.db          # Windows
+.vscode/           # Nếu bạn dùng VS Code để viết code MATLAB
+.idea/             # Nếu dùng IntelliJ/PyCharm
